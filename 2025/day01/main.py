@@ -1,6 +1,4 @@
-start_position = 50
-
-current_position = start_position
+current_position = 50
 number_pointing_zero = 0
 with open("input.txt", 'r') as f:
     for line in f:
