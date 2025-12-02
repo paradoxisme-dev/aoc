@@ -1,20 +1,30 @@
-import math
-start_position = 50
+class Rotor:
+    def __init__(self):
+        self.current = 50
+        self.zero_count = 0
 
-current_position = start_position
-number_zero = 0
+    def rigth(self):
+        self.current += 1
+        if self.current == 100:
+            self.zero_count += 1
+            self.current = 0
+
+    def left(self):
+        self.current -= 1
+        if self.current == -1:
+            self.current = 99
+        if self.current == 0:
+            self.zero_count += 1
+
+rotor = Rotor()
 with open("input.txt", 'r') as f:
     for line in f:
         displacement_value = int(line[1:])
         if line[0] == 'R':
-            current_position += displacement_value
+            for _ in range(displacement_value):
+                rotor.rigth()
         else:
-            current_position -= displacement_value
-        old_position = current_position
-        current_position %= 100
-        if old_position != current_position:
-            number_zero += abs(old_position // 100)
-        if current_position == 0 and not old_position != current_position:
-            number_zero += 1
+            for _ in range(displacement_value):
+                rotor.left()
 
-print(number_zero)
+print(rotor.zero_count)
