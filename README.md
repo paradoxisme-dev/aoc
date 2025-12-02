@@ -12,3 +12,5 @@ les finchier .bak(x).py donne des solution qui ont été abandonner.
 ## Day 01
 
 main2.bak.py est une possible solution buggé qui a été abandonné par manque de temps.
+
+## Day 02
