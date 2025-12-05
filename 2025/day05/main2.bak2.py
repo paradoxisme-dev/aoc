@@ -1,29 +1,24 @@
-from typing import Self
-
-
 class RangeFreshID(object):
-    def __init__(self, start: int, end: int):
+    def __init__(self, start: int, finish: int):
         self._start = start
-        self._end = end
+        self._finish = finish
 
     @property
     def start(self):
         return self._start
     
     @property
-    def end(self):
-        return self._end
+    def finish(self):
+        return self._finish
 
-    def overlap_range(self, tested_range: Self):
-        overlap1 = self.end >= tested_range.start and self.start <= tested_range.end
-        # overlap2 = self.start <= tested_range.end and self.start <= tested_range.start
-        return overlap1# or overlap2
+    def in_range(self, tested_id):
+        return tested_id >= self._start and tested_id <= self._finish
 
     def __len__(self):
-        return self._end - self._start + 1
+        return self._finish - self._start + 1
     
     def __repr__(self):
-        return f'[{self._start}-{self._end}]'
+        return f'[{self._start}-{self._finish}]'
 
 class RangeList(object):
     def __init__(self):
@@ -32,15 +27,15 @@ class RangeList(object):
     def insert_new_range(self, new_range: RangeFreshID):
         to_remove: list[RangeFreshID] = []
         for current_range in self._range_list:
-            if new_range.overlap_range(current_range):
-                print('overlap ', new_range, current_range)
+            if new_range.finish < current_range.start or new_range.start < current_range.finish:
                 to_remove.append(current_range)
         for removed_range in to_remove:
             self._range_list.remove(removed_range)
+        print(new_range, to_remove)
         to_remove.append(new_range)
         new_start = min([current_range.start for current_range in to_remove])
-        new_end = max([current_range.end for current_range in to_remove])
-        self._range_list.append(RangeFreshID(new_start, new_end))
+        new_finish = max([current_range.finish for current_range in to_remove])
+        self._range_list.append(RangeFreshID(new_start, new_finish))
 
     @property
     def total_size(self):
@@ -52,17 +47,13 @@ class RangeList(object):
 
 range_list = RangeList()
 number_fresh = 0
-import os 
-dir_path = os.path.dirname(os.path.realpath(__file__))
-with open(dir_path + "/input.txt", 'r') as file:
+with open("input.txt", 'r') as file:
     for line in file:
         is_in_a_range = False
         line = line[:-1]
         if line == "":
             break
         range_values = line.split('-')
-        start = int(range_values[0])
-        end = int(range_values[1])
-        range_list.insert_new_range(RangeFreshID(start, end))
+        range_list.insert_new_range(RangeFreshID(int(range_values[0]), int(range_values[1])))
 
 print(range_list.total_size)
