@@ -4,43 +4,21 @@ from functools import reduce
 total = 0
 columns: list[list[str]] = []
 
-lines = []
-col_ids = None
-with open('input.txt', 'r') as file:
+with open('input_ex.txt', 'r') as file:
     for line in file:
-        new_line_space_id = []
         line = line[:-1]
         line = line[::-1]
-        lines.append(line)
-        if line.count('+') != 0:
+        column_elements = line.split(' ')
+        if column_elements.count('+') != 0:
             break
         while True:
             try:
-                id_empty_column = line.index(' ')
-                new_line_space_id.append(id_empty_column)
-                line = '.' * (id_empty_column+1) + line[id_empty_column+1:]
+                id_empty_column = column_elements.index('')
+                if len(column_elements) > id_empty_column+1 and column_elements[id_empty_column+1] != '':
+                    column_elements[id_empty_column+1] = ' ' + column_elements[id_empty_column+1]
+                column_elements.remove('')
             except ValueError:
                 break
-        if col_ids is None:
-            col_ids = new_line_space_id
-        for tested_id in col_ids:
-            if tested_id not in new_line_space_id:
-                col_ids.remove(tested_id)
-    for tested_id in range(len(col_ids)):
-        if tested_id == 0:
-            continue
-        if col_ids[tested_id-1]+1 == col_ids[tested_id]:
-            false_id = col_ids[tested_id]
-    col_ids.remove(false_id)
-    for line in lines:
-        if line.count('+') != 0:
-            break
-        column_elements = []
-        current_start_id = 0
-        for cur_col_id in col_ids:
-            column_elements.append(line[current_start_id:cur_col_id])
-            current_start_id = cur_col_id
-        column_elements.append(line[cur_col_id:])
         for num_column, element in enumerate(column_elements):
             if len(columns) <= num_column:
                 columns.append([])
@@ -48,12 +26,13 @@ with open('input.txt', 'r') as file:
                 if len(columns[num_column]) <= number_id:
                     columns[num_column].append('')
                 columns[num_column][number_id] += character
-    column_elements = line.split(' ')
     while True:
         try:
             column_elements.remove('')
         except ValueError:
             break
+    for col in columns:
+        print(col)
     for num_column, operation in enumerate(column_elements):
         num_col = [el.strip() for el in columns[num_column]]
         while True:
@@ -62,6 +41,7 @@ with open('input.txt', 'r') as file:
             except ValueError:
                 break
         num_col = [int(el) for el in num_col]
+        print(num_col, operation)
         if operation == '+':
             total += sum(num_col)
         elif operation == '*':
