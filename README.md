@@ -9,8 +9,40 @@ Pour chaque jour, il y a au moins:
 
 les finchier .bak(x).py donne des solution qui ont été abandonner.
 
-## Day 01
+L'enregistrement des lives est disponible sur la chaine de VOD : https://www.youtube.com/@paradoxismeVOD
+
+## 2025
+
+### Jour 1
 
 main2.bak.py est une possible solution buggé qui a été abandonné par manque de temps.
 
-## Day 02
+La VOD a été dupprimer au vue de la qualité de l'audio.
+
+### Jour 2
+
+VOD: https://www.youtube.com/watch?v=1XQcXjst6yo
+
+### Jour 3
+
+VOD:
+- partie 1: https://youtu.be/J-YAO6GrhFY
+- partie 2: https://youtu.be/u7o7T65-sgI
+
+### Jour 4
+
+VOD non disponible
+
+### Jour 5
+
+VOD:
+- partie 1: https://youtu.be/ov6LhcaV_Es
+- partie 2: https://youtu.be/ds31-2C1FzY
+
+### Jour 6
+
+VOD: https://youtu.be/KgWJXHZcdCs
+
+### Jour 7
+
+VOD: https://youtu.be/bsiWvPal-nc
