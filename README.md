@@ -31,7 +31,7 @@ VOD:
 
 ### Jour 4
 
-VOD non disponible
+VOD: non disponible
 
 ### Jour 5
 
@@ -46,3 +46,6 @@ VOD: https://youtu.be/KgWJXHZcdCs
 ### Jour 7
 
 VOD: https://youtu.be/bsiWvPal-nc
+
+### Jour 8
+
