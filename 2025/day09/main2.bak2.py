@@ -50,7 +50,6 @@ for id_line, line in enumerate(new_array):
 print("calculate surfaces")
 
 surfaces: list[int] = []
-coords = []
 nb_calc = 0
 for tile_id1 in range(len(coord_red_tiles)):
     for tile_id2 in range(tile_id1 + 1, len(coord_red_tiles)):
@@ -63,24 +62,7 @@ for tile_id1 in range(len(coord_red_tiles)):
         max_y = coord1[1] if coord1[1] > coord2[1] else coord2[1]
         min_x = coord1[0] if coord1[0] < coord2[0] else coord2[0]
         min_y = coord1[1] if coord1[1] < coord2[1] else coord2[1]
-        coords.append([min_x,max_x, min_y,max_y])
-        surfaces.append((abs(coord1[0]-coord2[0]) + 1) * (abs(coord1[1]-coord2[1]) + 1))
+        if np.all(new_array[min_x:max_x, min_y:max_y]):
+            surfaces.append((abs(coord1[0]-coord2[0]) + 1) * (abs(coord1[1]-coord2[1]) + 1))
 
-is_not_ok = True
-nb_calc = 0
-while is_not_ok:
-    nb_calc += 1
-    if nb_calc  % 100 == 0:
-        print(nb_calc)
-    max_surface = max(surfaces)
-    id_current_max = surfaces.index(max_surface)
-    surfaces[id_current_max] = 0
-    coord = coords[id_current_max]
-    if new_array[coord[0],coord[2]] == False or new_array[coord[0],coord[3]] == False:
-        continue
-    if new_array[coord[1],coord[2]] == False or new_array[coord[1],coord[3]] == False:
-        continue
-    if np.all(new_array[coord[0]:coord[1], coord[2]:coord[3]]):
-        is_not_ok = False
-
-print(max_surface)
+print(max(surfaces))
