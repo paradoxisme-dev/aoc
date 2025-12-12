@@ -71,3 +71,6 @@ VOD:
 ### Jour 11
 
 VOD:
+- https://youtu.be/FwP7bqAvrTA
+- https://youtu.be/PZ36nyPJBhQ
+- https://youtu.be/E-YulLuTbmU
