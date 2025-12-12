@@ -60,3 +60,10 @@ VOD :
 - https://youtu.be/A6dtG3e5C2c
 - https://youtu.be/ws3nqi9AtTM
 - https://youtu.be/6hlo-dHuq5E
+
+### Jour 10
+
+VOD :
+- https://youtu.be/2zFvInSD8ts
+- https://youtu.be/OJFTn2VZmvE
+- https://youtu.be/6hlo-dHuq5E
