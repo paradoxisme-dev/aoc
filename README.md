@@ -49,3 +49,14 @@ VOD: https://youtu.be/bsiWvPal-nc
 
 ### Jour 8
 
+VOD :
+- https://youtu.be/pFxlU_4tIJU
+- https://youtu.be/nxqkQij59E4
+- https://youtu.be/Juyt8tOL9M8
+
+### Jour 9
+
+VOD :
+- https://youtu.be/A6dtG3e5C2c
+- https://youtu.be/ws3nqi9AtTM
+- https://youtu.be/6hlo-dHuq5E
