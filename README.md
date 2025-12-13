@@ -74,3 +74,7 @@ VOD:
 - https://youtu.be/FwP7bqAvrTA
 - https://youtu.be/PZ36nyPJBhQ
 - https://youtu.be/E-YulLuTbmU
+
+### Jour 12
+
+La fin et un peu de la triche. Je fait une fourchette entre le minimu et le maximum et je brut force parmis les 25 resultat possible! En utilisant la rcherche dicotomique sur les 3 premier résultat qui donne too low ou too high!

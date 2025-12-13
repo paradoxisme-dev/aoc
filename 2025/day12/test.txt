@@ -1,0 +1,4 @@
+580 -> too low
+588 -> too low
+591 -> not good
+593 -> good respond
