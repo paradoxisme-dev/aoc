@@ -2,6 +2,8 @@
 
 Mes proposition de code pour l'advent of code streamer en direct sur twitch (https://www.twitch.tv/paradev).
 
+⚠️ Les inputs sont différentes pour chaques personnes.
+
 Pour chaque jour, il y a au moins:
 - main.py qui donne la réponse de la partie 1,
 - main.py qui donne la réponse de la partie 2,
