@@ -2,6 +2,9 @@
 
 Mes proposition de code pour l'advent of code streamer en direct sur twitch (https://www.twitch.tv/paradev).
 
+Bilan jour par jour avec explication sur twitch:
+- première session : 21 décembre 2025
+
 ⚠️ Les inputs sont différentes pour chaques personnes.
 
 Pour chaque jour, il y a au moins:
@@ -80,3 +83,7 @@ VOD:
 ### Jour 12
 
 La fin et un peu de la triche. Je fait une fourchette entre le minimu et le maximum et je brut force parmis les 25 resultat possible! En utilisant la rcherche dicotomique sur les 3 premier résultat qui donne too low ou too high!
+
+VOD:
+- https://youtu.be/3ziP0YlTM1k
+- https://youtu.be/KZU-Im5i_jE
