@@ -7,9 +7,7 @@ with open("input.txt", 'r') as f:
             current_position += displacement_value
         else:
             current_position -= displacement_value
-        old_position = current_position
+        number_zero += abs(current_position / 101)
         current_position %= 100
-        if old_position != current_position:
-            number_zero += abs(old_position // 100)
 
 print(number_zero)
